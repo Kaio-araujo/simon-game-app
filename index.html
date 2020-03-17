@@ -9,23 +9,21 @@
 </head>
 <body>
     <div id="app">
-        <button @click="newGame">
+        <button @click="newGame()">
             NOUVELLE PARTIE
         </button>
         <hr>
         ** Nous afficherons ici le score **
         <hr>
         <div>
-            <span class="carre" @click="selectSquare(hautGauche)" :class="{ bleu: hautGauche }"></span>
-            <span class="carre" @click="selectSquare(hautDroite)" :class="{ rouge: hautDroite }"></span>
+            <span class="carre" @click='selectSquare("hautGauche")' :class="{ bleu: hautGauche }"></span>
+            <span class="carre" @click='selectSquare("hautDroite")' :class="{ rouge: hautDroite }"></span>
         </div>
         <div>
-            <span class="carre" @click="selectSquare(basGauche)" :class="{ vert: basGauche }"></span>
-            <span class="carre" @click="selectSquare(basDroite)" :class="{ jaune: basDroite }"></span>
+            <span class="carre" @click='selectSquare("basGauche")' :class="{ vert: basGauche }"></span>
+            <span class="carre" @click='selectSquare("basDroite")' :class="{ jaune: basDroite }"></span>
         </div>
         <hr>
-        <span>sequence : </span>
-        <pre>{{ sequence }}</pre>
     </div>
     <script src="./index.js" type="text/javascript"></script>
 </body>
